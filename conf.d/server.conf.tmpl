@@ -14,7 +14,7 @@ server {
         # proxy all traffic to this URL, 
         # note the trailing slash strips out the /proxy path on 
         # the request to the upstream server
-        proxy_pass ${NGINX_PROXY_URL}/core/;
+        proxy_pass ${NGINX_PROXY_URL}/foodsafe/;
         
         # Ensure HTTP get passed thru
         proxy_pass_request_headers on;
