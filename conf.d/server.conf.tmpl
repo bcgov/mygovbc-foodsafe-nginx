@@ -11,7 +11,7 @@ server {
     #real_ip_header    X-Forwarded-For;
     
     # set host to help downstream app server
-    proxy_set_header Host dev.my.gov.bc.ca;
+    proxy_set_header Host ${NGINX_PROXY_HOST};
     
     location / {
         # proxy all traffic to this URL, 
