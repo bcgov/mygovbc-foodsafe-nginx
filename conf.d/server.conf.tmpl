@@ -34,6 +34,8 @@ server {
     # more: http://www.html5rocks.com/en/tutorials/security/content-security-policy/#inline-code-considered-harmful
     add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ssl.google-analytics.com https://assets.zendesk.com https://connect.facebook.net; img-src 'self' https://ssl.google-analytics.com https://s-static.ak.facebook.com https://assets.zendesk.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.zendesk.com; font-src 'self' https://themes.googleusercontent.com; frame-src https://assets.zendesk.com https://www.facebook.com https://s-static.ak.facebook.com https://tautt.zendesk.com; object-src 'none'";
 
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
     # 172.16.0.0/12 is the entire addressable space in the cluster
     #set_real_ip_from  172.51.0.0/22;
     #set_real_ip_from  172.51.4.0/22;
