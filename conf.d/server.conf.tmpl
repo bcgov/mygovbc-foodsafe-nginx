@@ -57,12 +57,11 @@ server {
         proxy_cache globalcache;
     }
 
-
     location /mygovbcSWR {
         # proxy all traffic to this URL,
         # note the trailing slash strips out the /proxy path on
         # the request to the upstream server
-        proxy_pass ${NGINX_PROXY_URL}/foodsafe/mygovbcSWR/;
+        proxy_pass ${NGINX_PROXY_URL}/mygovbcSWR/;
 
         # Ensure HTTP get passed thru
         proxy_pass_request_headers on;
