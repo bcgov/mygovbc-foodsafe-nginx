@@ -70,10 +70,10 @@ server {
         proxy_cache globalcache;
     }
 
-    # For status of ngnix service
+    # Enable NGINX status module
     location /nginx_status {
         # Enable Nginx stats
-        stub_status on;
+        stub_status;
         # Only allow access from localhost
         allow 127.0.0.1;
         # Other request should be denied
