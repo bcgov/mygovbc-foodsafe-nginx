@@ -72,13 +72,9 @@ server {
 
     # Enable NGINX status module
     location /nginx_status {
-        # Enable Nginx stats
-        stub_status;
-        # Only allow access from localhost
-        allow 127.0.0.1;
-        # Other request should be denied
-        deny all;
-        # No need to log this request, its just noise
-        access_log off;
+        stub_status;            # Enable Nginx stats
+        allow 127.0.0.1;        # Only allow access from localhost
+        deny all;               # Other request should be denied
+        access_log off;         # No need to log this request, its just noise       
     }
 }
